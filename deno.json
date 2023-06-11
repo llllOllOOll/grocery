@@ -1,0 +1,12 @@
+{
+  "importMap": ".vscode/resolve_npm_imports.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
+  }
+}
