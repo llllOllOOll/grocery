@@ -5,7 +5,7 @@
     "build": "remix build",
     "deploy": "deployctl deploy --prod --include=build,public --project=soft-rook-61  ./build/index.js",
     "dev": "npm-run-all build --parallel \"dev:*\"",
-    "dev:deno": "cross-env NODE_ENV=development deno run --unstable --watch --allow-net --allow-read --allow-env ./build/index.js",
+    "dev:deno": "cross-env NODE_ENV=development deno run --unstable --watch     --allow-write  --allow-net --allow-read --allow-env ./build/index.js",
     "dev:remix": "remix watch",
     "format": "deno fmt --ignore=node_modules,build,public/build",
     "lint": "deno lint --ignore=node_modules,build,public/build",
@@ -26,6 +26,6 @@
     "npm-run-all": "^4.1.5"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=19.0.0"
   }
 }

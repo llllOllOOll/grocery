@@ -1,0 +1,4 @@
+"module": "es2022", "lib": ["DOM", "DOM.Iterable", "ES2019"],
+ "target": "es2021",
+
+and changed serverModuleFormat: "esm" in remix.config.js

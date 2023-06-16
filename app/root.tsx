@@ -13,6 +13,17 @@ import * as React from "react";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
+const bodyStyle = {
+  background: "rgb(32, 41, 45)",
+  color: "#d8ea8d",
+  fontWeight: "bold",
+  link: {
+    color: "#d8ea8d",
+  },
+  visited: {
+    color: "#ffffff",
+  },
+};
 
 export default function App() {
   return (
@@ -23,12 +34,25 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={bodyStyle}>
+        <h1>REMIX - Deno KV Database</h1>
+        <hr />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  return (
+    <div>
+      <h1>Error</h1>
+      <p>{error.message}</p>
+      <p>The stack trace is:</p>
+      <pre>{error.stack}</pre>
+    </div>
   );
 }

@@ -1,10 +1,11 @@
 import * as React from "react";
 
 import type { V2_MetaFunction } from "@remix-run/deno";
+import { useLoaderData } from "@remix-run/react";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Remix DENO KV Database" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
@@ -12,8 +13,7 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
     <>
-      <h1>HEllo</h1>
-      <p>Text paragraph</p>
+      <h1>Deno KV / REMIX</h1>
     </>
   );
 }
